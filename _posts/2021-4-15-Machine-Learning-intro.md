@@ -11,8 +11,6 @@ tags:
   - regression
 ---
 
-# Introduction to Machine Learning - Classification and Prediction
-
 In this post the main objectives for Machine Learning and some of the key concepts will be introduced. You will learn:
 * How is the Machine Learning paradigm different from other programming approaches.
 * Difference of classification vs prediction problems.
@@ -22,9 +20,9 @@ In this post the main objectives for Machine Learning and some of the key concep
 
 ## How is Machine Learning different from traditional algorithms?
 
-In a traditional algorithm, given a set of inputs, a computer program will follow a set of (in general deterministic) steps to reach out a solution. So in more formal terms, given an ${x}$, a vector of inputs, we get to our best estimate $\hat{y}$ of the ground truth $y$ by applying the function $f$:
+In a traditional algorithm, given a set of inputs, a computer program will follow a set of (in general deterministic) steps to reach out a solution. So in more formal terms, given an $${x}$$, a vector of inputs, we get to our best estimate $$\hat{y}$$ of the ground truth $y$ by applying the function $$f$$:
 
-> $f(x) = \hat{y}$
+> $$f(x) = \hat{y}$$
 
 where $f$ represents the algorithm that we have implemented.
 
