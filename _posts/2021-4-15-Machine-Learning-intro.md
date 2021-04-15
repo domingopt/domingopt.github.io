@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to Machine Learning
-mathjax: true
+usemathjax: true
 categories:
   - Machine Learning
 tags:
@@ -22,7 +22,7 @@ In this post the main objectives for Machine Learning and some of the key concep
 
 In a traditional algorithm, given a set of inputs, a computer program will follow a set of (in general deterministic) steps to reach out a solution. So in more formal terms, given an $${x}$$, a vector of inputs, we get to our best estimate $$\hat{y}$$ of the ground truth $y$ by applying the function $$f$$:
 
-> $$f(x) = \hat{y}$$
+<div> $$f(x) = \hat{y}$$ </div>
 
 where $f$ represents the algorithm that we have implemented.
 
