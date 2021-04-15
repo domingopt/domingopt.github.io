@@ -67,22 +67,11 @@ for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
   display(ggplot(iris_df, aes(x=axis1, y=axis2, fill='classification')) + geom_point())
 ```
 
-    /usr/local/lib/python3.7/dist-packages/plotnine/utils.py:1246: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
-      if pdtypes.is_categorical(arr):
-
-
 
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_1.png">
     
 
-
-
-    <ggplot: (8754541070825)>
-
-
-    /usr/local/lib/python3.7/dist-packages/plotnine/utils.py:1246: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
-      if pdtypes.is_categorical(arr):
 
 
 
@@ -92,25 +81,10 @@ for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
 
 
 
-    <ggplot: (8754541116105)>
-
-
-    /usr/local/lib/python3.7/dist-packages/plotnine/utils.py:1246: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
-      if pdtypes.is_categorical(arr):
-
-
-
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_7.png">
     
 
-
-
-    <ggplot: (8754539439137)>
-
-
-    /usr/local/lib/python3.7/dist-packages/plotnine/utils.py:1246: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
-      if pdtypes.is_categorical(arr):
 
 
 
@@ -120,25 +94,11 @@ for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
 
 
 
-    <ggplot: (8754539459597)>
-
-
-    /usr/local/lib/python3.7/dist-packages/plotnine/utils.py:1246: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
-      if pdtypes.is_categorical(arr):
-
-
 
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_13.png">
     
 
-
-
-    <ggplot: (8754539782173)>
-
-
-    /usr/local/lib/python3.7/dist-packages/plotnine/utils.py:1246: FutureWarning: is_categorical is deprecated and will be removed in a future version.  Use is_categorical_dtype instead
-      if pdtypes.is_categorical(arr):
 
 
 
@@ -148,7 +108,6 @@ for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
 
 
 
-    <ggplot: (8754539327677)>
 
 
 
