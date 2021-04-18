@@ -20,13 +20,13 @@ In this post the main objectives for Machine Learning and some of the key concep
 
 ## How is Machine Learning different from traditional algorithms?
 
-In a traditional algorithm, given a set of inputs, a computer program will follow a set of (in general deterministic) steps to reach out a solution. So in more formal terms, given an $${x}$$, a vector of inputs, we get to our best estimate $$\hat{y}$$ of the ground truth $y$ by applying the function $$f$$:
+In a traditional algorithm, given a set of inputs, a computer program will follow a set of (in general deterministic) steps to reach out a solution. So in more formal terms, given an $${x}$$, a vector of inputs, we get to our best estimate $$\hat{y}$$ of the ground truth $$y$$ by applying the function $$f$$:
 
 <div> $$f(x) = \hat{y}$$ </div>
 
-where $f$ represents the algorithm that we have implemented.
+where $$f$$ represents the algorithm that we have implemented.
 
-In traditional supervised learning cases, the goal is to *learn* $f()$ given enough observations of both ${x}$ and $y$. This difference is very important, so let's take a second to ponder on that. In traditional algorithms, you write $f()$ so once you are given $x$, you produce $\hat{y}$ (which is your estimation of $y$). In Statistical Leaning, you are given a set of $x$ **and $y$** so you produce $f()$ and when given new data ${x}\prime$ you can generate $\hat{y}$.
+In traditional supervised learning cases, the goal is to *learn* $$f()$$ given enough observations of both $${x}$$ and $$y$$. This difference is very important, so let's take a second to ponder on that. In traditional algorithms, you write $$f()$$ so once you are given $$x$$, you produce $$\hat{y}$$ (which is your estimation of $$y$$). In Statistical Leaning, you are given a set of $$x$$ **and $$y$$** so you produce $$f()$$ and when given new data $${x}\prime$$ you can generate $$\hat{y}$$.
 
 This might sound all a bit theoretical, so lets try to make it more concrete. Imagine you get tasked by a scientist to classify flowers in 3 categories, based on certain inputs (or in the ML lingo **features**). He has even collected data from his past analysis and would like to automate this classification.
 
@@ -43,58 +43,41 @@ Again, let's go for an example. If you are trying to separate data into differen
 On the other hand, if your aim is to anticipate client demand or to predict the price of a house given certain information, you are dealing with a prediction problem. It is important to understand this as the family of algorithms to model those that you might end up using will be different.
 
 
-```python
+{% highlight python %}
 import numpy as np
 import pandas as pd
 from sklearn import datasets
 from plotnine import *
 import itertools
-```
+{% endhighlight %}
 
 
-```python
+{% highlight python %}
 iris_data = datasets.load_iris()
 iris_features, iris_classes = iris_data['data'], iris_data['target']
 iris_df = pd.DataFrame(iris_features)
 iris_df['classification'] = iris_classes
 iris_df.rename({0: 's_lenght', 1: 's_width', 2: 'p_length', 3: 'p_width'}, inplace=True, axis=1)
 iris_df['classification'] = iris_df['classification'].astype('category')
-```
+{% endhighlight %}
 
 
-```python
+{% highlight python %}
 for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
   display(ggplot(iris_df, aes(x=axis1, y=axis2, fill='classification')) + geom_point())
-```
-
-
+{% endhighlight %}
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_1.png">
     
-
-
-
-
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_4.png">
-    
-
-
 
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_7.png">
     
-
-
-
-
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_10.png">
     
-
-
-
-
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_13.png">
     
@@ -111,7 +94,7 @@ for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
 
 
 
-```python
+{% highlight python %}
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
@@ -120,15 +103,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier
 from xgboost import XGBClassifier
 
-```
-
-
-```python
 X_train, X_test, y_train, y_test = train_test_split(iris_df.drop('classification', 1), iris_df['classification'], test_size=0.4, random_state=42)
-```
 
-
-```python
 classifiers = {'K-Nearest Neighbors': KNeighborsClassifier(3),
                'Logistic Regression': LogisticRegression(),
                'SVM Linear kernel': SVC(kernel="linear", C=0.025),
@@ -148,15 +124,18 @@ for name, classifier in classifiers.items():
   results['model'].append(name)
   results['accuracy_train'].append(train_score)
   results['accuracy_test'].append(test_score)
-```
 
-
-```python
 results_df = pd.DataFrame(results)
 format_dict = {'accuracy_train': '{:.2%}', 'accuracy_test': '{:.2%}'}
 results_df.style.format(format_dict)
 display(results_df)
-```
+{% endhighlight %}
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 
 
 <div>
@@ -243,19 +222,13 @@ display(results_df)
 
 
 
-```python
+{% highlight python %}
 boston_data = datasets.load_boston()
 boston_df = pd.DataFrame(boston_data['data'])
 boston_df.columns = boston_data['feature_names']
 boston_df['target'] = boston_data['target']
-```
-
-
-```python
 boston_df.head()
-```
-
-
+{% endhighlight %}
 
 
 <div>
@@ -385,14 +358,10 @@ boston_df.head()
 
 
 
-```python
+{% highlight python %}
 from matplotlib import pyplot
-```
-
-
-```python
 ggplot(boston_df, aes(x='LSTAT', y='target')) + geom_point()
-```
+{% endhighlight %}
 
 
     
@@ -402,18 +371,9 @@ ggplot(boston_df, aes(x='LSTAT', y='target')) + geom_point()
 
 
 
-
-    <ggplot: (8749825082681)>
-
-
-
-
-```python
+{% highlight python %}
 X_train, X_test, y_train, y_test = train_test_split(boston_df.drop('target', 1), boston_df['target'], test_size=0.4, random_state=42)
-```
 
-
-```python
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVR
@@ -421,10 +381,6 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor
 from xgboost import XGBRegressor
 
-```
-
-
-```python
 from matplotlib import pyplot
 
 regressors = {'K-Nearest Neighbors': KNeighborsRegressor(n_neighbors=5),
@@ -450,85 +406,18 @@ for name, regressor in regressors.items():
   results['model'].append(name)
   results['accuracy_train'].append(train_score)
   results['accuracy_test'].append(test_score)
-```
-
-    K-Nearest Neighbors
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a370e550>
-
-
-    Linear Regression
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a370e690>
-
-
-    SVR Linear
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a36f1450>
-
-
-    SVR RBF
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a36f1050>
-
-
-    Decission Tree
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a36f1890>
-
-
-    Random Forest
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a3750690>
-
-
-    AdaBoost
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a370ff50>
-
-
-    GBM
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a36ac850>
-
-
-    XGBoost
-    [09:19:02] WARNING: /workspace/src/objective/regression_obj.cu:152: reg:linear is now deprecated in favor of reg:squarederror.
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f53a36ac490>
-
-
+{% endhighlight %}
 
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_16_18.png">
     
 
-
-
-```python
+{% highlight python %}
 results_regression_df = pd.DataFrame(results)
 format_dict = {'accuracy_train': '{:.2%}', 'accuracy_test': '{:.2%}'}
 results_regression_df.style.format(format_dict)
 display(results_regression_df)
-```
+{% endhighlight %}
 
 
 <div>
@@ -614,7 +503,3 @@ display(results_regression_df)
 </div>
 
 
-
-```python
-
-```
