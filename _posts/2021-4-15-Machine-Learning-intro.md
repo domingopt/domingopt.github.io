@@ -131,12 +131,6 @@ results_df.style.format(format_dict)
 display(results_df)
 {% endhighlight %}
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
-
 
 <div>
 <style scoped>
