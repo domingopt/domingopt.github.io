@@ -9,3 +9,8 @@ Gemfile.lock
 node_modules
 package.json
 .jekyll-cache
+venv
+requirements.txt
+conda_tf_env.yml
+.ipynb_checkpoints/
+
