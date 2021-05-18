@@ -380,28 +380,13 @@ nn_model.fit(training_images, training_labels, epochs=10, verbose=2)
     1875/1875 - 1s - loss: 0.2259 - accuracy: 0.9347
     Epoch 2/10
     1875/1875 - 1s - loss: 0.0918 - accuracy: 0.9724
-    Epoch 3/10
-    1875/1875 - 1s - loss: 0.0627 - accuracy: 0.9810
-    Epoch 4/10
-    1875/1875 - 1s - loss: 0.0449 - accuracy: 0.9855
-    Epoch 5/10
-    1875/1875 - 1s - loss: 0.0322 - accuracy: 0.9900
-    Epoch 6/10
-    1875/1875 - 1s - loss: 0.0253 - accuracy: 0.9921
-    Epoch 7/10
-    1875/1875 - 1s - loss: 0.0198 - accuracy: 0.9936
-    Epoch 8/10
-    1875/1875 - 1s - loss: 0.0161 - accuracy: 0.9945
+    
+    ...
+
     Epoch 9/10
     1875/1875 - 1s - loss: 0.0126 - accuracy: 0.9959
     Epoch 10/10
     1875/1875 - 1s - loss: 0.0122 - accuracy: 0.9959
-
-
-
-
-
-    <tensorflow.python.keras.callbacks.History at 0x2a854ed90>
 
 
 
@@ -592,66 +577,9 @@ plt.show()
     Training for 2 epochs
     1875/1875 [==============================] - 0s 233us/step - loss: 0.0597 - accuracy: 0.9812
     313/313 [==============================] - 0s 359us/step - loss: 0.0842 - accuracy: 0.9743
-    Training for 3 epochs
-    1875/1875 [==============================] - 1s 250us/step - loss: 0.0419 - accuracy: 0.9874
-    313/313 [==============================] - 0s 386us/step - loss: 0.0738 - accuracy: 0.9760
-    Training for 4 epochs
-    1875/1875 [==============================] - 0s 235us/step - loss: 0.0297 - accuracy: 0.9915
-    313/313 [==============================] - 0s 364us/step - loss: 0.0684 - accuracy: 0.9795
-    Training for 5 epochs
-    1875/1875 [==============================] - 0s 230us/step - loss: 0.0198 - accuracy: 0.9943
-    313/313 [==============================] - 0s 360us/step - loss: 0.0616 - accuracy: 0.9803
-    Training for 6 epochs
-    1875/1875 [==============================] - 0s 238us/step - loss: 0.0165 - accuracy: 0.9948
-    313/313 [==============================] - 0s 358us/step - loss: 0.0636 - accuracy: 0.9805
-    Training for 7 epochs
-    1875/1875 [==============================] - 1s 256us/step - loss: 0.0137 - accuracy: 0.9961
-    313/313 [==============================] - 0s 378us/step - loss: 0.0672 - accuracy: 0.9822
-    Training for 8 epochs
-    1875/1875 [==============================] - 0s 235us/step - loss: 0.0125 - accuracy: 0.9964
-    313/313 [==============================] - 0s 358us/step - loss: 0.0770 - accuracy: 0.9796
-    Training for 9 epochs
-    1875/1875 [==============================] - 1s 248us/step - loss: 0.0149 - accuracy: 0.9951
-    313/313 [==============================] - 0s 371us/step - loss: 0.0959 - accuracy: 0.9754
-    Training for 10 epochs
-    1875/1875 [==============================] - 0s 240us/step - loss: 0.0146 - accuracy: 0.9950
-    313/313 [==============================] - 0s 371us/step - loss: 0.0843 - accuracy: 0.9787
-    Training for 11 epochs
-    1875/1875 [==============================] - 1s 246us/step - loss: 0.0126 - accuracy: 0.9959
-    313/313 [==============================] - 0s 371us/step - loss: 0.0876 - accuracy: 0.9770
-    Training for 12 epochs
-    1875/1875 [==============================] - 0s 241us/step - loss: 0.0039 - accuracy: 0.9990
-    313/313 [==============================] - 0s 367us/step - loss: 0.0723 - accuracy: 0.9820
-    Training for 13 epochs
-    1875/1875 [==============================] - 0s 241us/step - loss: 0.0122 - accuracy: 0.9957
-    313/313 [==============================] - 0s 368us/step - loss: 0.0970 - accuracy: 0.9776
-    Training for 14 epochs
-    1875/1875 [==============================] - 0s 240us/step - loss: 0.0133 - accuracy: 0.9951
-    313/313 [==============================] - 0s 375us/step - loss: 0.1065 - accuracy: 0.9786
-    Training for 15 epochs
-    1875/1875 [==============================] - 1s 265us/step - loss: 0.0060 - accuracy: 0.9979
-    313/313 [==============================] - 0s 466us/step - loss: 0.1033 - accuracy: 0.9794
-    Training for 16 epochs
-    1875/1875 [==============================] - 1s 258us/step - loss: 0.0057 - accuracy: 0.9982
-    313/313 [==============================] - 0s 394us/step - loss: 0.1046 - accuracy: 0.9790
-    Training for 17 epochs
-    1875/1875 [==============================] - 1s 250us/step - loss: 0.0047 - accuracy: 0.9984
-    313/313 [==============================] - 0s 378us/step - loss: 0.1201 - accuracy: 0.9788
-    Training for 18 epochs
-    1875/1875 [==============================] - 0s 239us/step - loss: 0.0044 - accuracy: 0.9984
-    313/313 [==============================] - 0s 376us/step - loss: 0.0986 - accuracy: 0.9807
-    Training for 19 epochs
-    1875/1875 [==============================] - 1s 257us/step - loss: 0.0036 - accuracy: 0.9988
-    313/313 [==============================] - 0s 368us/step - loss: 0.1145 - accuracy: 0.9803
-    Training for 20 epochs
-    1875/1875 [==============================] - 1s 252us/step - loss: 0.0048 - accuracy: 0.9983
-    313/313 [==============================] - 0s 368us/step - loss: 0.1012 - accuracy: 0.9811
-    Training for 21 epochs
-    1875/1875 [==============================] - 1s 258us/step - loss: 0.0106 - accuracy: 0.9966
-    313/313 [==============================] - 0s 411us/step - loss: 0.1174 - accuracy: 0.9793
-    Training for 22 epochs
-    1875/1875 [==============================] - 0s 243us/step - loss: 0.0024 - accuracy: 0.9993
-    313/313 [==============================] - 0s 378us/step - loss: 0.1076 - accuracy: 0.9806
+
+    ...
+
     Training for 23 epochs
     1875/1875 [==============================] - 1s 246us/step - loss: 0.0022 - accuracy: 0.9992
     313/313 [==============================] - 0s 377us/step - loss: 0.1131 - accuracy: 0.9789
