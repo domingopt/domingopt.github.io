@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TITLE
-mathjax: true
+usemathjax: true
 categories:
   - Machine Learning
 tags:
