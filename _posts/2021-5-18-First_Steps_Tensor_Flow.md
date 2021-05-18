@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TITLE
+title: First steps with TensorFlow
 usemathjax: true
 categories:
   - Machine Learning
@@ -10,8 +10,6 @@ tags:
   - MLP
   - ConvNets
 ---
-
-# First steps with TensorFlow
 
 After spending longer than expected getting TensorFlow to work on my new M1 MacBook Air (I will add some pointers if someone is really interested in saving 8h of his/her life...) I have started the first post on the first steps using TensorFlow (remember that first post... sigh!).
 
