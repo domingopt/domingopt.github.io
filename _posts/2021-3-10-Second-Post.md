@@ -15,6 +15,6 @@ According to the [TF Certificate Candidate Handbook](https://www.tensorflow.org/
 On top of those, I will also explore [TF-agents](https://github.com/tensorflow/agents), the Reinforcement Learning library in TF, starting with some of the examples in [the tutorial page](https://www.tensorflow.org/agents/tutorials/0_intro_rl). The main goals for this exploration will be to end up with:
 1. A better understanding of the RL framework and in particular of the DQN approach
 1. Implement an Agent able to play Texas Hold'em at a competitive level
-1. Implement an Agent that day-trades on liquid ETFs (at a profit)
+1. Implement an Agent that day-trades on liquid ETFs (at a profit :D)
 
 And finally, we will draw inspiration from the excellent posts from [Lilia Weng's Github pages blog](https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html#key-concepts).

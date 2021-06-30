@@ -312,9 +312,7 @@ plt.ylabel('Train loss')
 plt.title('Loss for different number of batch size')
 plt.show()
 ```
-
-
-    
+  
 <img src="/images/First_Steps_Tensor_Flow_files/First_Steps_Tensor_Flow_13_0.png">
     
 
@@ -353,6 +351,13 @@ nn_model = Sequential([
     Dense(10)
 ])
 
+With the code above, we have defined the topology of our multi-layer perceptron, where we take a 28x28 pixels image
+and, flatten it, feed this information through a hidden layer and finally get the probability of belonging to one of each
+10 classes in the final layer.
+
+<img src="/images/First_Steps_Tensor_Flow_files/MNIST Classification Example.png">
+
+
 # Step 2: Compilation
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 nn_model.compile(optimizer='adam', loss=loss_fn, metrics=['accuracy'])
@@ -366,8 +371,8 @@ train_loss, train_acc = nn_model.evaluate(training_images, training_labels)
 print(f"Test Loss: {train_loss}, test accuracy: {train_acc}")
 ```
 
-    1875/1875 [==============================] - 1s 247us/step - loss: 2.3971 - accuracy: 0.0858
-    Test Loss: 2.398622512817383, test accuracy: 0.08474999666213989
+>    1875/1875 [==============================] - 1s 247us/step - loss: 2.3971 - accuracy: 0.0858
+>    Test Loss: 2.398622512817383, test accuracy: 0.08474999666213989
 
 
 
@@ -521,16 +526,13 @@ print(f"Predicted: {np.argmax(prediction)}, result {test_labels[image_index]}")
 print(f"Prediction vector: {prediction}")
 ```
 
-    Predicted: 9, result 9
-    Prediction vector: [[1.1563310e-09 5.0442005e-11 1.6174324e-10 3.9292686e-10 1.9350280e-05
-      3.6754395e-11 2.0179853e-11 1.5409244e-08 9.9527006e-07 9.9997962e-01]]
-
-
+>    Predicted: 9, result 9
+>    Prediction vector: [[1.1563310e-09 5.0442005e-11 1.6174324e-10 3.9292686e-10 1.9350280e-05
+>      3.6754395e-11 2.0179853e-11 1.5409244e-08 9.9527006e-07 9.9997962e-01]]
 
     
 <img src="/images/First_Steps_Tensor_Flow_files/First_Steps_Tensor_Flow_26_1.png">
     
-
 
 ### Early stopping in training
 
@@ -587,9 +589,7 @@ plt.show()
     1875/1875 [==============================] - 1s 264us/step - loss: 0.0052 - accuracy: 0.9985
     313/313 [==============================] - 0s 370us/step - loss: 0.1119 - accuracy: 0.9800
 
-
-
-    
+ 
 <img src="/images/First_Steps_Tensor_Flow_files/First_Steps_Tensor_Flow_28_1.png">
     
 

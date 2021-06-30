@@ -81,18 +81,9 @@ for axis1, axis2 in itertools.combinations(iris_df.columns[:-1], 2):
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_13.png">
     
-
-
-
-
     
 <img src="/images/MachineLearning_intro_files/MachineLearning_intro_5_16.png">
     
-
-
-
-
-
 
 {% highlight python %}
 from sklearn.model_selection import train_test_split
